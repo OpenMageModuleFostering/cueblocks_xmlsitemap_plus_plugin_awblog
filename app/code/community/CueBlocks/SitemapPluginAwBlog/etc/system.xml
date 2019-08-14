@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!--
+* @package     CueBlocks_SitemapPluginAwBlog
+* @company     CueBlocks
+* @author      Francesco Magazzu' <francesco.magazzu at cueblocks.com>
+-->
+<config>
+    <sections>
+        <sitemapEnhancedPlus translate="label" module="sitemapEnhancedPlus">
+            <label>XML Sitemap Plus Generator &#38; Splitter</label>
+            <groups>
+                <blog translate="label">
+                    <label>AW Blog Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>40</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled>
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Include/exclude AW Blog pages in XML Sitemap.</comment>
+                            <tooltip>If 'included', a XML sitemap containing only 'AW Blog' pages will be generated. Once
+                                generated, this XML Sitemap filename will be appended with '_blog' to help you identify
+                                that this sitemap has AW Blog pages in it.
+                            </tooltip>
+                        </enabled>
+                        <enabled_realdate>
+                            <label>Use real update date</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>18</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>If you select 'yes' it will be used the date when the Blog page was updated. If you
+                                select 'no' the date used will be the current one.
+                            </comment>
+                            <tooltip></tooltip>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </enabled_realdate>
+                        <changefreq translate="label">
+                            <label>Frequency (Optional)</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>sitemapEnhancedPlus/system_config_source_frequency</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>How frequently is the content on the Blog pages likely to change ?</comment>
+                            <tooltip>This value is only a hint to Search Engines and may not correlate exactly to how
+                                often search engines crawl the Blog pages.
+                            </tooltip>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </changefreq>
+                        <priority translate="label comment">
+                            <label>Priority (Optional)</label>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>sitemapEnhancedPlus/system_config_backend_priority</backend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>The valid range is from 0.0 to 1.0, with 1.0 being the most important.</comment>
+                            <tooltip>This indicates priority of your 'Blog' pages relative to all the other pages on the
+                                site to Search Engines. Assigning a high priority to all the pages will not help your
+                                site's search ranking.
+                            </tooltip>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </priority>
+                        <!--<excluded_pages translate="label">-->
+                            <!--<label>Excluded pages</label>-->
+                            <!--<frontend_type>multiselect</frontend_type>-->
+                            <!--<can_be_empty>1</can_be_empty>-->
+                            <!--<source_model>sitemapEnhancedPlus/system_config_source_cms</source_model>-->
+                            <!--<sort_order>30</sort_order>-->
+                            <!--<show_in_default>1</show_in_default>-->
+                            <!--<show_in_website>1</show_in_website>-->
+                            <!--<show_in_store>1</show_in_store>-->
+                            <!--<comment>Press the 'Control' key and select the CMS pages that you want to exclude from your-->
+                                <!--XML Sitemap(s).-->
+                            <!--</comment>-->
+                            <!--<depends>-->
+                                <!--<enabled>1</enabled>-->
+                            <!--</depends>-->
+                        <!--</excluded_pages>-->
+                        <js>
+                            <frontend_type>hidden</frontend_type>
+                            <sort_order>99</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[<script type='text/javascript'>
+
+var groupId = 'sitemapEnhancedPlus_blog';
+var jsRowId = 'tr#row_'+groupId+'_js';
+var selectId = groupId+'_enabled';
+
+hideFields(jsRowId);
+addEventObserver(groupId,selectId);
+
+</script> ]]>
+                            </comment>
+                        </js>
+                    </fields>
+                </blog>
+            </groups>
+        </sitemapEnhancedPlus>
+    </sections>
+</config>

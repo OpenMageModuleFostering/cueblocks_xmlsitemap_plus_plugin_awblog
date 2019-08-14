@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/CueBlocks_XMLSitemap_Plus_Plugin_AwBlog",
+    "type": "magento-module",
+    "license": "EULA",
+    "homepage": "",
+    "description": "Add Aw Blog support ",
+    "authors": [
+    {
+        "name": "Francesco Magazzu'",
+        "email": "magento@cueblocks.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
