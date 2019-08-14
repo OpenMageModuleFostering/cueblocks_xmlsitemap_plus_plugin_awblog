@@ -6,7 +6,7 @@
 -->
 <config>
     <sections>
-        <sitemapEnhancedPlus translate="label" module="sitemapEnhancedPlus">
+        <sitemap_enhanced_plus translate="label" module="sitemapEnhancedPlus">
             <label>XML Sitemap Plus Generator &#38; Splitter</label>
             <groups>
                 <blog translate="label">
@@ -118,6 +118,6 @@ addEventObserver(groupId,selectId);
                     </fields>
                 </blog>
             </groups>
-        </sitemapEnhancedPlus>
+        </sitemap_enhanced_plus>
     </sections>
 </config>

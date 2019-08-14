@@ -1,18 +1,20 @@
 <?xml version="1.0"?>
 <package>
     <name>CueBlocks_XMLSitemap_Plus_Plugin_AwBlog</name>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <stability>stable</stability>
     <license uri="http://store.cueblocks.com/LICENSE_STORE.txt">EULA</license>
     <channel>community</channel>
     <extends/>
     <summary>Add Aw Blog support </summary>
     <description>Add Aw Blog support </description>
-    <notes>Developed by CueBlocks - December 2013</notes>
+    <notes>Bug Fix:&#xD;
+&#xD;
+Fixed compatibility issue with latest version Sitemap Plus extension.</notes>
     <authors><author><name>Francesco Magazzu'</name><user>Franky</user><email>magento@cueblocks.com</email></author></authors>
-    <date>2014-01-23</date>
-    <time>09:17:52</time>
-    <contents><target name="magecommunity"><dir name="CueBlocks"><dir name="SitemapPluginAwBlog"><dir name="Model"><dir name="Mysql4"><dir name="Processor"><dir name="Blog"><file name="Blog.php" hash="066f17d0921e5888db34a6f9546feae3"/></dir></dir></dir><file name="Observer.php" hash="ca385e1d13c4efc415efb233cb02b1b7"/><dir name="Processor"><dir name="Blog"><file name="Blog.php" hash="b4e5f712c117fafe2651b5a994989a55"/></dir></dir></dir><dir name="etc"><file name="config.xml" hash="c0e7d3f82388691290c3f83ce03212ec"/><file name="system.xml" hash="7c73aa4544815f43aac9857f7531ffd7"/></dir></dir></dir></target><target name="mageetc"><dir><dir name="modules"><file name="CueBlocks_SitemapPluginAwBlog.xml" hash="034ba8ea5bb5a7a79c99389e250b33b5"/></dir></dir></target></contents>
+    <date>2015-10-15</date>
+    <time>13:24:07</time>
+    <contents><target name="magecommunity"><dir name="CueBlocks"><dir name="SitemapPluginAwBlog"><dir name="Model"><dir name="Mysql4"><dir name="Processor"><dir name="Blog"><file name="Blog.php" hash="066f17d0921e5888db34a6f9546feae3"/></dir></dir></dir><file name="Observer.php" hash="ca385e1d13c4efc415efb233cb02b1b7"/><dir name="Processor"><dir name="Blog"><file name="Blog.php" hash="b4e5f712c117fafe2651b5a994989a55"/></dir></dir></dir><dir name="etc"><file name="config.xml" hash="16782dffbf0e3ed2408f12df3845bfe9"/><file name="system.xml" hash="677020f5fa44856ca404379134ee4fc8"/></dir></dir></dir></target><target name="mageetc"><dir><dir name="modules"><file name="CueBlocks_SitemapPluginAwBlog.xml" hash="034ba8ea5bb5a7a79c99389e250b33b5"/></dir></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.0.0</min><max>6.0.0</max></php></required></dependencies>
 </package>
